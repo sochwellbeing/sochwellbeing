@@ -1,0 +1,267 @@
+
+.navbar-font{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+
+  .navbar-font:hover{
+    color: white;
+    opacity: 0.7;
+    text-underline-offset: 10px;
+    text-decoration-color: #5956EE;
+    text-decoration-thickness: 2px;
+  }
+
+
+.link-font{
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #FF51E3;
+    
+  }
+
+.link-font:hover{
+    opacity: 0.7;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #5956EE;
+    text-decoration-thickness: 3px;
+  }
+
+.bottom-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
+.title-font{
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 260px;
+  font-weight: bold;
+  color: #5956EE;
+}
+
+
+.subtitle-font{
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 80px;
+  color: white;
+  justify-content: left;
+  line-height: 1;
+}
+
+.header-font{
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+.subheader-font{
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  color: white;
+  justify-content: center;
+  text-justify: inter-word;
+  text-align:justify;
+  line-height: 1;
+}
+
+.description-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  text-justify: inter-word;
+  text-align:justify
+}
+
+.tagline-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #5956EE;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  color: #5956EE;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-font:hover{
+  opacity: 0.7;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: #5956EE;
+  text-decoration-thickness: 3px;
+}
+
+.identity-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: white;
+  text-align: left;
+  text-justify: inter-word;
+  text-align:justify;
+    /* For medium screens and larger */
+}
+
+.profile-name-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: #5956EE;
+  text-align: left;
+  text-justify: inter-word;
+  text-align:justify;
+    /* For medium screens and larger */
+}
+
+.process-name-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: #5956EE;
+  text-align: left;
+  text-justify: inter-word;
+  text-align:justify;
+    /* For medium screens and larger */
+}
+
+.service-tag{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #5956EE;
+    justify-content: left;
+    text-align: left;
+    font-weight: lighter;
+}
+
+/* medium screens */
+@media (max-width: 1600px) and (min-width: 1024px) {
+  /* Small screen font size adjustment */
+  .title-font{
+    font-size: 180px;
+  }
+
+  .subtitle-font{
+    font-size: 40px;
+  }
+
+  .description-font{
+    font-size: 20px;
+  }
+
+  .bottom-font {
+    font-size: 50px;
+  
+  }
+
+}
+
+@media (max-width: 1024px) and (min-width: 640px) {
+
+    /* Small screen font size adjustment */
+    .link-font {
+      font-size: 28px;
+    }
+  
+    .bottom-font{
+      font-size: 20px;  
+    }
+  
+    .title-font{
+      font-size: 80px;
+    }
+    .description-font{
+      font-size: 20px;
+    }
+  
+    .subtitle-font{
+      font-size: 20px;
+    }
+  
+    .header-font{
+      font-size: 80px;
+    }
+    .subheader-font{
+      font-size: 32px;
+    }
+  
+    .button-font{
+      font-size: 30px;
+    }
+  
+    .identity-font {
+      width: 100%;
+  }
+
+  .profile-name-font{
+    font-size: 20px;
+  }
+  .process-name-font{
+    font-size: 20px;
+  }
+
+    
+  }
+
+/* Small screens */
+@media (max-width: 640px) {
+  /* Small screen font size adjustment */
+  .link-font {
+    font-size: 28px;
+  }
+
+  .bottom-font{
+    font-size: 20px;  
+  }
+
+  .title-font{
+    font-size: 80px;
+  }
+  .description-font{
+    font-size: 20px;
+  }
+
+  .subtitle-font{
+    font-size: 20px;
+  }
+
+  .header-font{
+    font-size: 80px;
+  }
+  .subheader-font{
+    font-size: 32px;
+  }
+
+  .button-font{
+    font-size: 30px;
+  }
+
+  .identity-font {
+    width: 100%;
+}
+.process-name-font{
+  font-size: 20px;
+}
+  
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image img {
+  animation: rotate 20s linear infinite;
+  ; /* Adjust the duration and timing function as needed */
+}
