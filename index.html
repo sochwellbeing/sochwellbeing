@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>soch</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Soch | Unlock Power within | Master your mind. |</title>
 </head>
 
-<body>
-    <h1>soch</h1>
+<body class="bg-black flex flex-col min-h-screen">
+    <nav class="bg-black border-gray-200 py-5">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="assets/Vector.svg" class="h-5" alt="Flowbite Logo" />
+              <span class="self-center font-bold navbar-font">Maxent</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" id="burger-menu"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        aria-controls="navbar-default" aria-expanded="false">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <a href="/identity.html" class="block py-2 px-3 navbar-font hover:underline underline-offset rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">
+                    Identity
+                </a>
+              </li>
+              <li>
+                <a href="/service.html" class="block py-2 px-3 navbar-font hover:underline underline-offset rounded md:bg-transparent md:text-blue-700 md:p-0">
+                    Services
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#" class="block py-2 px-3 navbar-font hover:underline underline-offset rounded md:bg-transparent md:text-blue-700 md:p-0">
+                    Work
+                </a>
+              </li> -->
+              <li>
+                <a href="/process.html" class="block py-2 px-3 navbar-font hover:underline underline-offset rounded md:bg-transparent md:text-blue-700 md:p-0">
+                    Process
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden hidden flex flex-col space-y-4 my-4 pr-4 items-end absolute top-20 right-0 z-100 bg-black">
+            <a href="/identity.html" class="navbar-font hover:underline underline-offset">Identity</a>
+            <a href="/service.html" class="navbar-font hover:underline underline-offset">Services</a>
+            <!-- <a href="#" class="navbar-font hover:underline underline-offset">Work</a> -->
+            <a href="/process.html" class="navbar-font hover:underline underline-offset">Process</a>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+
+      <div class="flex flex-col items-center justify-center pt-10 space-y-3 md:space-y-5">
+        <div class="image">
+            <img src="assets/Vector.svg" alt="Maxent Logo" class="w-125">
+        </div>
+
+        <div class="title">
+            <p class="header-font">Maxent</p>
+        </div>
+        <div class="w-10/12 xl:w-4/12 mx-auto">
+            <div class="subheader">
+            <p class="subheader-font">An AI and Product consulting collective.</p>
+            </div>
+        </div>
+
+        <div class="w-10/12 xl:w-4/12 mx-auto"> <!-- Centering container -->
+            <div class="description text-white text-center">
+                <p class="description-font text-justify">We help you to achieve big goals that are people-centric, 
+                    rigorously tested, and expertly crafted. From groundbreaking product development 
+                    to world-class AI solutions, we minimize limits and maximize your potential.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-10/12 xl:w-4/12 mx-auto pt-3 md:pt-5"> 
+            <div class="tagline">
+                <p class="tagline-font">Want to maximize your potential?</p>
+            </div>
+        </div>
+
+        <div class="w-10/12 xl:w-4/12 mx-auto space-y-0"> 
+                <a href="mailto:info@maxentlabs.com">
+                    <p  class="button-font">
+                        Get in touch. 
+                    </p>
+                </a>
+        </div>
+    </div>
+
+    <footer class="bg-black py-5 mt-auto">
+        <div class="max-w-screen-xl rtl:space-x-reverse flex items-center justify-end mx-auto p-4">
+            <div class="flex space-x-4">
+                <a href="mailto:info@maxentlabs.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope text-white text-2xl"></i>
+                </a>
+                <a href="https://github.com/maxent-ai" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github text-white text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/maxentlabs/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin text-white  text-2xl"></i>
+                </a>
+                <a href="https://twitter.com/maxentlabs" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter text-white  text-2xl"></i>
+                </a>
+            </div>
+            <!-- Other footer content -->
+        </div>
+    </footer>
+
+      <script>
+        // Toggle hamburger menu and mobile menu
+        const burgerMenu = document.getElementById('burger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerMenu.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+ 
 </body>
+</html>
