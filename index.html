@@ -5,31 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Soch | Unlock Power within | Master your mind. |</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Maxentlabs | Ai development & consulting | Product strategy and Growth consulting |</title>
 </head>
 
-<body class="bg-black flex flex-col min-h-screen">
-      <div class="flex flex-col items-center justify-center pt-10 space-y-3 md:space-y-5">
+<body class="bg-black flex flex-col items-center justify-center min-h-screen">
+    <!-- Main Content -->
 
-        <div class="title">
-            <p class="header-font">Soch</p>
+    <div class="flex flex-col items-center justify-start w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-5/12">
+
+        
+        <div class="flex flex-col items-start justify-center w-full">
+            <div class="title">
+                <p class="header-font">SOCH</p>
+            </div>
+            
+            <div class="items-start justify-left">
+                <div class="subheaderv1-font">Unlock Power Within. </div> 
+            </div>
+        
+            <div class="items-start justify-left">
+                <div class="subheaderv2-font">Master Your <span id="changing-word" style="display: inline-block; width: 150px;">Mind.</span></div> 
+            </div>
         </div>
 
-        <div class="w-10/12 xl:w-4/12 mx-auto"> <!-- Centering container -->
-            <div class="description text-white text-center">
-                <p class="description-font text-justify">Unlock Power Within. 
-                <b></b>
-                Master your Thoughts. 
-                <b></b>
-                Master your Emotions. 
-                <b></b>
-                Master your Mind.
-                </p>
-            </div>
+        <div class="items-start justify-left py-10 px-2 w-full">
+            <p class="tagline-font break-words">Soch is under active development and will be available on iOS and web later this year.</p>
         </div>
     </div>
 
- 
+    <script>
+        const words = ['Mind.', 'Feeling.', 'Thought.'];
+        let i = 0;
+    
+        setInterval(() => {
+            document.getElementById('changing-word').innerHTML = words[i];
+            i = (i + 1) % words.length;
+        }, 2000); // Change word every 2 seconds
+    </script>
 </body>
 </html>
+
