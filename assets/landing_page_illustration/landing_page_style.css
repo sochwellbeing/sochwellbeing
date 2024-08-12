@@ -1,0 +1,565 @@
+:root {
+    --page-margin: 0px;
+    --footer-margin-bottom: 46px;
+
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    /* Preserves a black background if the image fails to load */
+    background-image: url('noise_10.png');
+    /* Path to your noise image */
+    background-size: cover;
+    /* Cover the entire area of the body */
+    background-repeat: repeat;
+    /* Repeat the texture across the body */
+    color: #ffffff;
+    font-family: 'Averia Serif Libre', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 var(--page-margin);
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    padding: 40px 0;
+}
+
+.main-content {
+    width: 62%;
+    max-width: 1072px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main-heading {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 116.39px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.main-subtitle {
+    font-family: 'Figtree', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.2px;
+    text-align: left;
+    margin-top: 20px;
+    /* Adjust this value to set the space between heading and subtitle */
+    max-width: 894px;
+}
+
+.underline-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.content-underline {
+    position: absolute;
+    bottom: -10px;
+    /* Adjust this value to position the underline */
+    left: -5px;
+    /* Adjust this value to align the underline with the text */
+    width: calc(100% + 10px);
+    /* Extend slightly beyond the text */
+    height: auto;
+}
+
+.try-soch-container {
+    width: 364px;
+    height: 177.55px;
+    margin-top: 0px;
+    /* Adjust this value to set the space between subtitle and this component */
+    position: relative;
+}
+
+.call-cta-line {
+    display: block;
+    /* Ensure it sits on its own line below the image */
+    margin-top: 0px;
+    margin-left: 100px;
+    /* Add some space above the SVG */
+    width: 40%;
+    /* Optional: Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    align-items: center;
+}
+
+.download-apple-store {
+    width: 229px;
+    height: 76.55px;
+    margin-top: 40px;
+    /* No gap as specified */
+    opacity: 1;
+    /* Initially invisible */
+    transition: opacity 0.3s ease-in-out;
+    /* Smooth transition for opacity changes */
+}
+
+.try-soch-container:hover .download-apple-store {
+    opacity: 1;
+    /* Make the SVG visible on hover over the container */
+}
+
+.image-container {
+    position: relative;
+    width: 500px;
+    /* Adjust width as per your layout */
+    height: 500px;
+    /* Adjust height as per your layout */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: moveUpDown 5s ease-in-out infinite;
+    /* Add animation */
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Original position */
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Move 2px up */
+    }
+
+    25%,
+    75% {
+        transform: translateY(10px);
+        /* Move 2px down */
+    }
+}
+
+.background-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #F5F5F5;
+    top: 223px;
+    left: 221px;
+    box-shadow: 0px 4px 50px 0px #3A3834;
+    border-radius: 50%;
+    /* Makes it a perfect circle */
+    opacity: 0;
+    /* Start fully transparent */
+    animation: fadeInCircle 3s ease-in forwards;
+    /* Animation to fade in */
+}
+
+.landing-page-image {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust positioning to truly center the images */
+    object-fit: cover;
+    /* Ensures the images cover the area without distortion */
+}
+
+.upper {
+    z-index: 1;
+    width: 400px;
+    /* Width of upper image */
+    height: 400px;
+    /* Height of upper image */
+}
+
+.lower {
+    z-index: 0;
+    width: 500px;
+    /* Width of lower image */
+    height: 500px;
+    /* Height of lower image */
+}
+
+
+.centered-star {
+    width: 220px;
+    /* Final size as needed */
+    height: 220px;
+    filter: blur(20px);
+    /* Start fully blurred */
+    opacity: 0;
+    /* Start fully transparent */
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%) scale(0.5);
+    /* Start scaled down */
+    z-index: 2;
+    animation: blurToClear 10s ease-in-out infinite;
+    /* Adjust time as needed */
+}
+
+@keyframes blurToClear {
+
+    0%,
+    100% {
+        filter: blur(30px);
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.25);
+        /* Start smaller and blurred */
+    }
+
+    25% {
+        transform: translate(-50%, -50%) scale(0.75);
+        /* Slightly move and scale up */
+    }
+
+    50% {
+        filter: blur(5px);
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        /* Scale to original size */
+    }
+
+    75% {
+        transform: translate(-50%, -50%) scale(0.75);
+        /* Slightly move and scale down */
+    }
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px var(--page-margin);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.logo-text {
+    font-size: 40px;
+    line-height: 48.5px;
+    font-weight: 700;
+}
+
+.download-cta {
+    display: flex;
+    align-items: center;
+}
+
+.download-text {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.19px;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.19px;
+    text-align: left;
+}
+
+/* Main Content Styles */
+main {
+    flex-grow: 1;
+    padding: 40px 0;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+    padding: 40px var(--page-margin) var(--footer-margin-bottom);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tagline {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.19px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    line-height: 24.19px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.19px;
+}
+
+.footer-links a {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.socials {
+    display: flex;
+    gap: 42px;
+}
+
+.socials img {
+    vertical-align: middle;
+}
+
+.footer-mobile {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    :root {
+        --page-margin: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -100px;
+    }
+
+    .image-container {
+        order: -1;
+        /* Move the image container to the top on mobile */
+        width: 90vw;
+        /* Full width on mobile */
+        height: 90vw;
+        /* Allow height to adjust automatically */
+        position: relative;
+        align-items: top;
+        margin-top: -50px;
+        /* Add some space between image and content */
+        animation: moveUpDown 10s ease-in-out infinite;
+        /* Add animation */
+    }
+
+    .background-circle {
+        width: 50vw;
+        /* Use viewport width for sizing */
+        height: 50vw;
+        transform: translate(-50%, -50%);
+    }
+
+    .landing-page-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .upper {
+        width: 60vw;
+        /* Adjust size using viewport width */
+        height: auto;
+    }
+
+    .lower {
+        width: 80vw;
+        /* Adjust size using viewport width */
+        height: auto;
+    }
+
+    .centered-star {
+        width: 30vw;
+        /* Adjust size using viewport width */
+        height: vw;
+    }
+
+    .main-content {
+        width: 100%;
+        order: 1;
+        /* Move main content below the image on mobile */
+    }
+
+
+    .main-heading {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .content-underline {
+        font-size: 30;
+        bottom: -5px;
+        left: -2px;
+        width: calc(100% + 4px);
+    }
+
+    .main-subtitle {
+        font-size: 24px;
+        line-height: 28.8px;
+        margin-top: 15px;
+    }
+
+    .try-soch-image {
+        width: 60%;
+        height: auto;
+    }
+
+    .call-cta-line {
+        width: 20%;
+    }
+
+    .download-apple-store {
+        width: 160px;
+        height: 53.33px;
+        margin-top: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+
+    .logo-text {
+        font-size: 30px;
+        line-height: 36.5px;
+    }
+
+    .tagline {
+        font-size: 15px;
+    }
+
+    .download-cta,
+    .nav-links {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .footer-links-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .footer-links-mobile a {
+        font-family: 'Averia Serif Libre', serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .socials-mobile {
+        display: flex;
+        justify-content: left;
+        gap: 42px;
+    }
+
+    .socials-mobile img {
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 1728px) {
+    :root {
+        --page-margin: 5px;
+    }
+
+    .container {
+        max-width: 1728px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --page-margin: 10px;
+    }
+}
