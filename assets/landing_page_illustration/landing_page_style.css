@@ -376,6 +376,34 @@ footer {
     display: none;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-heading {
+        font-size: 72px;
+        line-height: 87.19px;
+    }
+
+    .image-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .background-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .upper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .lower {
+        width: 380px;
+        height: 380px;
+    }
+
+
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     :root {
