@@ -77,6 +77,14 @@
     /* Add opposite animation */
 }
 
+.doc {
+    width: 320px;
+    /* Final size as needed */
+    height: 320px;
+    z-index: 2;
+    /* Adjust time as needed */
+    animation: moveDownUp 5s ease-in-out infinite;
+}
 @keyframes moveDownUp {
 
     0%,
@@ -188,6 +196,12 @@
         animation: moveDownUp 10s ease-in-out infinite;
     }
 
+        .doc {
+            width: 40vw;
+            /* Adjust size using viewport width */
+            height: auto;
+            animation: moveDownUp 10s ease-in-out infinite;
+        }
     .privacy-title {
         font-size: 36px;
     }
