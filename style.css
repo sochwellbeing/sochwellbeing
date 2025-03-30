@@ -476,6 +476,7 @@ opacity: 1;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 5px;
   }
   
   .cta-container {
@@ -520,6 +521,10 @@ opacity: 1;
         justify-content: center;
         padding: 40px 20px;
         flex: 0 0 auto;
+      }
+
+      .final-tagline {
+        padding-top: 10px;
       }
     
     /* Font sizes remain unchanged */
