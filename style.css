@@ -34,13 +34,18 @@ section {
     scroll-snap-align: start;
 }
 
-.intro-section {
-height: 100vh;
-width: 100%;
-display: flex;
-padding: 0 10%;
-position: relative;
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+
 
 .logo-content {
 width: 50%;
@@ -81,9 +86,9 @@ margin-bottom: 40px;
 
 .download-btn {
 font-family: 'Figtree', sans-serif;
-background-color: #7B68EE; /* Adjust to match your purple */
+background-color: #8C81BF; /* Adjust to match your purple */
 color: white;
-border: none;
+border: 2px solid white;
 border-radius: 30px;
 padding: 15px 30px;
 font-size: 18px;
@@ -288,4 +293,234 @@ transition: opacity 0.2s;
 
 .legal-link:hover {
 opacity: 1;
+}
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-wrapper {
+        width: 100%;
+        height: auto;
+      }
+      
+      .logo-wrapper img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      
+      .logo-content {
+        width: 90%;
+        height: auto;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        
+      }
+      /* Remove any container padding if needed */
+      .intro-container {
+        padding: 0;
+      }
+      
+      .text-content {
+        padding: 0;
+      }
+    
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    
+    /* Reduce brand name (h1) size */
+    .brand-name {
+        font-size: 64px; /* Adjust this value as needed */
+        align-self: flex-start;
+    }
+    
+    /* Make tagline left-aligned */
+    .tagline {
+        text-align: left;
+        font-size: 32px;
+    }
+    
+    /* Reduce button font size */
+    .download-btn {
+        font-size: 16px; /* Adjust this value as needed */
+    }
+}
+
+/* Make sure all sections stack properly on mobile */
+@media screen and (max-width: 768px) {
+  /* Base styling for all sections */
+  section {
+    display: block;
+    width: 100%;
+    position: relative;
+    clear: both;
+    overflow: visible;
+    margin: 0;
+    padding: 40px 20px; /* Consistent padding for all sections */
+  }
+  
+  /* Remove any fixed or absolute positioning that might cause overlapping */
+  section[id^="section"] {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    height: auto;
+  }
+  
+  /* Add visible separation between sections */
+  section + section {
+    margin-top: 20px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+}
+
+#section5 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+  
+  /* Make columns inside sections stack vertically */
+  .feature-column,
+  .benefit-slide,
+  [class*="-column"] {
+    width: 100%;
+    margin-bottom: 30px;
+    float: none;
+  }
+  
+  /* Fix for any scrolling containers */
+  .benefits-scroll-container,
+  [class*="scroll-container"] {
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: auto;
+  }
+  
+  /* Fix for any fixed elements */
+  .fixed-elements {
+    position: relative;
+  }
+
+  .process-section {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+
+  .feature-column {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    flex: 0 0 auto;
+  }
+
+  .feature-heading {
+    font-size: 32px;
+  }
+
+  .feature-description {
+    font-size: 24px;
+  }
+
+  .final-tagline {
+    font-size: 32px;
+    max-width: 90%;
+  }
+
+  .closing-section {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px 40px 20px;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .app-icon {
+    margin-top: 0;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .final-tagline {
+    font-size: 32px;
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-wrapper {
+        /* Keep the same size as mobile but center it */
+        margin: 0 auto;
+        /* Adjust this value based on your mobile logo size */
+        max-width: 200px;
+    }
+    
+    .text-content {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-section {
+        flex-direction: column;
+        height: auto;
+        padding: 50px;
+      }
+    
+      .feature-column {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+        flex: 0 0 auto;
+      }
+    
+    /* Font sizes remain unchanged */
 }
